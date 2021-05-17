@@ -1,7 +1,9 @@
-using System;
+﻿using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+
+// PAKE System.Net.Http.Formatting.Extension  (https://www.nuget.org/packages/System.Net.Http.Formatting.Extension)
 
 namespace BlackerzDotNet
 {
@@ -69,7 +71,7 @@ namespace BlackerzDotNet
         public static async Task<BotData> GetBotData(string botid)
         {
             BotData botData = default(BotData);
-            
+
             HttpResponseMessage response = await client.GetAsync("api/v1/bots/" + botid);
             if (response.IsSuccessStatusCode)
             {
@@ -77,7 +79,7 @@ namespace BlackerzDotNet
             }
             return botData;
         }
-        public static string AvatarOf(string id, string avatar, string format="")
+        public static string AvatarOf(string id, string avatar, string format = "")
         {
             return "https://cdn.discordapp.com/avatars/" + id + "/" + avatar + format;
         }
@@ -85,11 +87,11 @@ namespace BlackerzDotNet
         {
             return "https://cdn.discordapp.com/avatars/" + botData.Id + "/" + botData.Avatar + format;
         }
-        public static string GetInviteLink(BotData bot, int permission=52288)
+        public static string GetInviteLink(BotData bot, int permission = 52288)
         {
             return "https://discord.com/oauth2/authorize?client_id=" + bot.Id + "&permissions=" + permission.ToString() + "&scope=bot";
         }
-        public static string GetInviteLink(string clientId, int permission=52288)
+        public static string GetInviteLink(string clientId, int permission = 52288)
         {
             return "https://discord.com/oauth2/authorize?client_id=" + clientId + "&permissions=" + permission.ToString() + "&scope=bot";
         }

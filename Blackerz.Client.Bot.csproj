@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Fastering18</Authors>
+    <Company>Blackerz Bot List</Company>
+    <Description>Asyncronous client API request
+await BlackerzBot.GetBotData("1234")
+
+Maintained by Ghosteez#5936 | https://blackerz.herokuapp.com | https://github.com/Fastering18</Description>
+    <PackageProjectUrl>https://github.com/Fastering18/NuGet-Blackerz-BotList</PackageProjectUrl>
+    <PackageIconUrl>https://cdn.blackerz.tk/Images/Blackerz.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/Fastering18/NuGet-Blackerz-BotList</RepositoryUrl>
+    <PackageTags>BlackerzBotList, discord</PackageTags>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <Copyright></Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http.Formatting.Extension" Version="5.2.3" />
+  </ItemGroup>
+
+</Project>
